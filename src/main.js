@@ -12,10 +12,7 @@ var coverTitle = document.querySelector(".cover-title");
 var tagline1 = document.querySelector(".tagline-1");
 var tagline2 = document.querySelector(".tagline-2");
 var makeNewBookButton = document.querySelector('.create-new-book-button');
-var userCover = document.querySelector(".user-cover");
-var userTitle = document.querySelector(".user-title");
-var userDesc1 = document.querySelector(".user-desc1");
-var userDesc2 = document.querySelector(".user-desc2");
+
 
 // We've provided a few variables below
 var savedCovers = [
@@ -72,17 +69,23 @@ function viewHomeView() {
   savedView.classList.add('hidden');
 }
 
-function makeMyBook() {
-
-  covers.push(userCovers.value);
-  titles.push(userTitle.value);
-  descriptors.push(userDesc1.value);
-  descriptors.push(userDesc2.value);
-
-
+function makeMyBook(event) {
+  var userCover = document.querySelector("#cover").value;
+  var userTitle = document.querySelector("#title").value;
+  var userDesc1 = document.querySelector("#descriptor1").value;
+  var userDesc2 = document.querySelector("#descriptor2").value;
+  covers.push(userCover);
+  titles.push(userTitle);
+  descriptors.push(userDesc1);
+  descriptors.push(userDesc2);
+  currentCover = new Cover(userCover, userTitle, userDesc1, userDesc2);
+  coverImage.src = currentCover.cover;
+  coverTitle.innerText = currentCover.title;
+  tagline1.innerText = currentCover.tagline1;
+  tagline2.innerText = currentCover.tagline2;
+  viewHomeView();
+  event.preventDefault();
 }
-console.log(covers)
-
 
 // We've provided one function to get you started
 function getRandomIndex(array) {
