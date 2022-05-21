@@ -12,6 +12,8 @@ var coverTitle = document.querySelector(".cover-title");
 var tagline1 = document.querySelector(".tagline-1");
 var tagline2 = document.querySelector(".tagline-2");
 var makeNewBookButton = document.querySelector('.create-new-book-button');
+var savedCoversSection = document.querySelector('.saved-covers-section');
+
 
 
 // We've provided a few variables below
@@ -27,6 +29,10 @@ makeNewCoverButton.addEventListener('click', viewFormView);
 viewSavedCoverButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomeView)
 makeNewBookButton.addEventListener('click', makeMyBook)
+saveCoverButton.addEventListener('click', saveBook)
+savedCoversSection.addEventListener('click', printBooks)
+savedView.addEventListener('dblclick', deleteSavedCover)
+
 
 
 // Create your event handlers and other functions here 👇
@@ -49,6 +55,7 @@ function viewFormView() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  savedView.classList.add('hidden');
 }
 
 function viewSavedCovers() {
@@ -58,6 +65,8 @@ function viewSavedCovers() {
   homeButton.classList.remove('hidden');
   saveCoverButton.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
+
+
 }
 
 function viewHomeView() {
@@ -70,6 +79,7 @@ function viewHomeView() {
 }
 
 function makeMyBook(event) {
+  event.preventDefault();
   var userCover = document.querySelector("#cover").value;
   var userTitle = document.querySelector("#title").value;
   var userDesc1 = document.querySelector("#descriptor1").value;
@@ -84,8 +94,32 @@ function makeMyBook(event) {
   tagline1.innerText = currentCover.tagline1;
   tagline2.innerText = currentCover.tagline2;
   viewHomeView();
-  event.preventDefault();
 }
+
+function saveBook() {
+  if (!savedCovers.includes(currentCover)) {
+  savedCovers.push(currentCover)
+  console.log(savedCovers)
+  printBooks()
+  }
+}
+function printBooks() {
+  savedCoversSection.innerHTML = "";
+  for(var i = 0; i < savedCovers.length; i++) {
+    savedCoversSection.innerHTML +=
+    `<section class='mini-cover'>
+    <img class="cover-image" src="${savedCovers[i].cover}">
+    <h2 class="cover-title">"${savedCovers[i].title}"</h2>
+    <h3 class="tagline">A tale of <span class="tagline-1">"${savedCovers[i].tagline1}"</span> and <span class="tagline-2">"${savedCovers[i].tagline2}"</span></h3>
+    `
+  }
+
+
+}
+
+
+
+
 
 // We've provided one function to get you started
 function getRandomIndex(array) {
