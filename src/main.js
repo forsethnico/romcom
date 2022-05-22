@@ -81,6 +81,7 @@ function makeMyBook(event) {
   descriptors.push(userDesc2.value);
   currentCover = new Cover(userCover.value, userTitle.value, userDesc1.value, userDesc2.value);
   assignCoverElements();
+  removeInputs();
   viewHomeView();
 }
 
@@ -124,6 +125,13 @@ function deleteSavedCover(event) {
     }
   }
   printBooks();
+}
+
+function removeInputs() {
+  userCover.value = "";
+  userTitle.value = "";
+  userDesc1.value = "";
+  userDesc2.value = "";
 }
 
 // We've provided one function to get you started
