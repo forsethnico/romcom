@@ -7,7 +7,7 @@ The project spec & rubric can be found [here](https://frontend.turing.io/project
 Please visit our site [here](https://forsethnico.github.io/romcom/)!
 
 ## Features
-When you first visit the RomCom site you will be pleasantly surprised with a randomly generated romance novel cover. This cover contains a title, a background image, and two descriptions about this tale. There are a list of preselected images, titles, and descriptor words each in arrays. Every time you refresh the page or click "Show New Random Cover" you will be treated to a brand new randomly selected cover. However if none of these covers seem appealign to you, you can create a custom cover using the "Make Your Own Cover" button. This will take you to a form where you can enter your own background image, title, and two descriptor words. These will then be displayed on your new custom romance novel cover! 
+When you first visit the RomCom site you will be pleasantly surprised with a randomly generated romance novel cover. This cover contains a title, a background image, and two descriptions about this tale. There are a list of preselected images, titles, and descriptor words each in arrays. Every time you refresh the page or click "Show New Random Cover" you will be treated to a brand new randomly selected cover. However if none of these covers seem appeal to you, you can create a custom cover using the "Make Your Own Cover" button. This will take you to a form where you can enter your own background image, title, and two descriptor words. These will then be displayed on your new custom romance novel cover! 
 
 ![Screenshot of a CustomCover](https://user-images.githubusercontent.com/18154724/169677456-8d53b1fa-f25c-4c38-a443-568c8af1cc0e.jpg)
 
@@ -20,7 +20,7 @@ If you decide you no longer want a particular cover in your library, just double
 If you want to return back to the home page, click the "Home" button where you will be treated to another randomly generated cover! 
 
 ## Contributors
-This website was built by two front end engineering students with the [Turing School of Software and Design](https://turing.edu/). The following students are: [Nicole Forseth](https://github.com/forsethnico) and [Connor Corcoran](https://github.com/Connorcorc). The HTML, CSS, and Covers.js files were built by instructors in the program with some additional hints in our main.js file where all of our work is located. 
+This website was built by two front end engineering students with the [Turing School of Software and Design](https://turing.edu/). The following students are: [Nicole Forseth](https://github.com/forsethnico) and [Connor Corcoran](https://github.com/Connorcorc). The HTML, CSS, and Cover.js files were built by instructors in the program with some additional hints in our main.js file (where all of our work is located). 
 
 ## Technologies
 HTML, CSS, Javascript. Simple DOM manipulation and use of eventListeners were a focus of this project.
@@ -29,6 +29,6 @@ HTML, CSS, Javascript. Simple DOM manipulation and use of eventListeners were a 
 Disable the 'Make My Book' button until all fields are filled and provide error messages if data entered is not correct.
 
 ## Sources
--[MDN](https://developer.mozilla.org/en-US/)
--[W3Schools](https://www.w3schools.com/)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [W3Schools](https://www.w3schools.com/)
 
