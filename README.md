@@ -26,7 +26,11 @@ This website was built by two front end engineering students with the [Turing Sc
 HTML, CSS, Javascript. Simple DOM manipulation and use of eventListeners were a focus of this project.
 
 ## Future Additions
-Disable the 'Make My Book' button until all fields are filled and provide error messages if data entered is not correct.
+We are unlikely to add much additional functionality to this project, but here are a few options for improving functionality. 
+- Disable the 'Make My Book' button until all fields are filled
+- Provide error messages if data entered is not correct
+- Ability to preview the custom cover before it is created
+- Update the HTML and CSS for a new more exciting look
 
 ## Sources
 - [MDN](https://developer.mozilla.org/en-US/)
