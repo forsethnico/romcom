@@ -2,7 +2,7 @@
 
 RomCom is a website that generates romance novel covers. The covers can either be randomly generated or the user can create a custom cover using images, title, and descriptors of their choice.   
 
-The project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/romcom-pair.html)
+The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/romcom-pair.html)
 
 Please visit our site [here](https://forsethnico.github.io/romcom/)!
 
